@@ -1,7 +1,12 @@
+import CanvasComponet from "./components/CanvasComponet"
 
 const App = () => {
   return (
-    <div className="bg-zinc-900 w-full h-screen">App</div>
+    <>
+    <div className="w-full h-screen bg-zinc-900 text-white">
+      <CanvasComponet />
+    </div>
+    </>
   )
 }
 
