@@ -3,17 +3,17 @@ import Data from "./Data";
 
 const App = () => {
   return (
-    <>
-      <div className="w-full bg-black h-screen flex flex-wrap">
-        {Data.map((item, index) => {
+    <div className="w-full h-screen flex flex-wrap">
+      {Data.map((item, index) => {
+        return (
           <div key={index}>
             {Data.map((canvasDets, index) => {
-              <CanvasComponet key={index} details={canvasDets} />;
+              return <CanvasComponet key={index} details={canvasDets} />;
             })}
-          </div>;
-        })}
-      </div>
-    </>
+          </div>
+        );
+      })}
+    </div>
   );
 };
 

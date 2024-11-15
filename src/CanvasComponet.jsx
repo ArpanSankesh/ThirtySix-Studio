@@ -7,9 +7,10 @@ import gsap from "gsap";
 
 const CanvasComponet = ({details}) => {
   
-  const {startIndex, numImages, duration, size, top , left , zIndex} = details
+  
+  const {startIndex, numImages, duration, size} = details
   const [index, setIndex] = useState({ value : startIndex})
-  const canvasRef = useRef(null)
+  
   
   useGSAP(() => {
     gsap.to(index,{
@@ -22,12 +23,13 @@ const CanvasComponet = ({details}) => {
       }
     })
   })
+  const canvasRef = useRef(null)
+  
   useEffect(() => {
     const canvas = canvasRef.current;
     const cxt = canvas.getContext("2d")
     const img = new Image()
     img.src = CanvasImage[index.value]
-    console.log('Image source:', img.src);
     img.onload = () => {
       canvas.width = img.width;
       canvas.height = img.height;
