@@ -1,8 +1,6 @@
 
 const CanvasComponet = () => {
-  return (
-    <div>CanvasComponet</div>
-  )
+  return <canvas id="canvas"></canvas>
 }
 
 export default CanvasComponet
