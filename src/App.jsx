@@ -1,18 +1,13 @@
+// App.jsx
 import CanvasComponet from "./CanvasComponet";
 import Data from "./Data";
 
 const App = () => {
   return (
     <div className="w-full h-screen flex flex-wrap">
-      {Data.map((item, index) => {
-        return (
-          <div key={index}>
-            {Data.map((canvasDets, index) => {
-              return <CanvasComponet key={index} details={canvasDets} />;
-            })}
-          </div>
-        );
-      })}
+      {Data.map((canvasDets, index) => (
+        <CanvasComponet key={index} details={canvasDets} />
+      ))}
     </div>
   );
 };
